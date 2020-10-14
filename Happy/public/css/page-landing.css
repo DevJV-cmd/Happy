@@ -1,0 +1,117 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  text-align: center;
+  min-height: 100vh; /*height altura*/
+
+  display: flex; /* Adiciona todas as caixas alinhada uma do lado da outra*/
+  /*align-items: center; modo de alinha itens da flex, mas alinha apenas em cima e em baixo não dos lados*/
+}
+#container {
+  margin: auto; /* alinha os 4 lados*/
+  width: min(
+    90%,
+    112rem
+  ); /*Se 90% for o valor minimo entre 90% e 112rem ele vai aplicar a width.*/
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(
+    4rem,
+    8vw,
+    8.4rem
+  ); /*A clamp solicita 3 tamanho na sequencia. No minimo 4rem no maximo 8.4rem e o ideal 8vw*/
+  text-align: left;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+
+  border: none; /*Não tenha bordas*/
+  border-radius: 3rem; /*Arredondar as bordas*/
+
+  display: flex;
+  align-items: center; /*Alinha de cima pra baixa*/
+  justify-content: center;
+
+  margin: 0 auto;
+  transition: background 200ms;
+}
+.visit a:hover {
+  /*Procurar a classe quando o mouse estiver em cima*/
+  background: #96feff;
+}
+
+/*desktop version */
+@media (min-width: 760px) {
+  /*Só será possivel se o for verdadeiro, no caso só vai funcinar se no minimo for 760px*/
+  #container {
+    padding: 5rem 2rem;
+    /*shorthand background: image repeat position / size */
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem); /*Uso ../ para sair da pasta que estou*/
+  }
+  header {
+    display: flex;
+    align-items: center; /*centralizar os itens. */ /*====> ambas funções só funciona com a o display:flex*/
+    justify-content: space-between; /*Adicionar um espaço entre as caixas*/
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+  }
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  main h1 {
+    font-weight: bold;
+    line-height: 0.88;
+
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+    width: min(300px, 80%);
+  }
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .visit p {
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+  .visit a {
+    margin: initial;
+  }
+}

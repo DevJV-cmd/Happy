@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*manter a propoção das bordas*/
+}
+body {
+ 
+    height: 100vh;
+    color: white;
+   
+}
+body, input, button, textarea {
+    /*font-weight: 400;
+    font-size: 18px; tamanho da fonte
+    font-family: 'Nunito', sans-serif;
+    line-height: 1;*/
+    
+    font: 400 1.8rem/1 'Nunito', sans-serif; /*Versão incurtada*/
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+
+
+
+
+#logo {
+    animation-delay: 50ms;
+}
+
+.location {
+    animation-delay: 100ms;
+
+}
+main h1 {
+    animation-delay: 150ms;
+}
+.visit p {
+    animation-delay: 200ms;
+}
+.visit a {
+    animation-delay: 250ms;
+}
